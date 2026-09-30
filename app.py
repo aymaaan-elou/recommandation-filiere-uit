@@ -20,8 +20,8 @@ st.set_page_config(
 # (utilisés uniquement pour générer les données d'entraînement)
 # ============================================================
 PROFILS_FILIERES = {
-    'Intelligence Artificielle':                              {'maths': 17, 'physique': 14, 'chimie': 10, 'svt': 10, 'geologie': 8,  'francais': 13, 'anglais': 16},
-    'Informatique Fondamentale':                              {'maths': 17, 'physique': 13, 'chimie': 10, 'svt': 10, 'geologie': 8,  'francais': 13, 'anglais': 15},
+    'Intelligence Artificielle':                              {'maths': 16, 'physique': 13, 'chimie': 10, 'svt': 10, 'geologie': 8,  'francais': 13, 'anglais': 16},
+    'Informatique Fondamentale':                              {'maths': 16, 'physique': 14, 'chimie': 10, 'svt': 10, 'geologie': 8,  'francais': 13, 'anglais': 15},
     'Mathématiques et Applications':                          {'maths': 18, 'physique': 14, 'chimie': 10, 'svt': 10, 'geologie': 8,  'francais': 13, 'anglais': 13},
     'Mathématiques et Informatique pour la Décision':         {'maths': 17, 'physique': 14, 'chimie': 10, 'svt': 10, 'geologie': 8,  'francais': 14, 'anglais': 14},
     "Ingénierie Électronique et Traitement de l'Information": {'maths': 13, 'physique': 17, 'chimie': 12, 'svt': 9,  'geologie': 8,  'francais': 12, 'anglais': 14},
@@ -43,7 +43,7 @@ PROFILS_FILIERES = {
 SERIES_BAC = ['Sciences Maths', 'PC (Physique-Chimie)', 'SVT', 'BCG (Bio-Chimie-Géologie)', 'Économie']
 INTERETS = ['Programmation / Informatique', 'Mathématiques', 'Physique', 'Chimie',
             'Biologie / Santé', 'Géologie / Environnement', 'Énergies', 'Ingénierie']
-CARRIERES = ['Ingénieur', 'Chercheur', 'Médecin / Santé', 'Enseignant', 'Technicien', 'Entrepreneur']
+CARRIERES = ['Ingénieur', 'Chercheur', 'Médecin / Santé', 'Enseignant', 'Technicien', 'Informaticien']
 
 # ============================================================
 # GÉNÉRATION DU DATASET D'ENTRAÎNEMENT
@@ -129,10 +129,10 @@ def _interet_compatible(filiere, rng):
 
 def _carriere_compatible(filiere, rng):
     correspondances = {
-        'Intelligence Artificielle':                              ['Ingénieur', 'Chercheur', 'Entrepreneur'],
-        'Informatique Fondamentale':                              ['Ingénieur', 'Chercheur'],
+        'Intelligence Artificielle':                              ['Ingénieur', 'Chercheur', 'Informaticien'],
+        'Informatique Fondamentale':                              ['Ingénieur', 'Chercheur', 'Informaticien'],
         'Mathématiques et Applications':                          ['Chercheur', 'Enseignant'],
-        'Mathématiques et Informatique pour la Décision':         ['Ingénieur', 'Chercheur'],
+        'Mathématiques et Informatique pour la Décision':         ['Ingénieur', 'Chercheur','Enseignant'],
         "Ingénierie Électronique et Traitement de l'Information": ['Ingénieur', 'Technicien'],
         'Physique Fondamentale et Applications':                  ['Chercheur', 'Enseignant'],
         'Ingénieries des Énergies Renouvelables':                 ['Ingénieur', 'Technicien'],

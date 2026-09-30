@@ -18,4 +18,4 @@ Application web qui recommande la filière universitaire la plus adaptée aux no
 
 ## Auteur
 
-[Votre nom] - Candidat au Master Informatique et Intelligence Artificielle
+El ouahdani Aymane - Candidat au Master Informatique et Intelligence Artificielle
